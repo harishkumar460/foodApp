@@ -1,0 +1,88 @@
+<mainContainer id="homepage">
+<div class="row m-b-30" id="header_strip">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-text">
+		<p>
+			<span ng-bind="menuItemCtrl.selectedVendor.name"></span>
+		</p>
+	</div>
+</div>
+<span class="error-message" ng-if="!menuItemCtrl.confirmedOrderDetails">
+	No Order details found! </span>
+<div class="content-panel m-b-30">
+	<div
+		ng-repeat="item in menuItemCtrl.confirmedOrderDetails.itemsDetails">
+		<div class="row align-center xs-hidden">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-4 block">
+				<p class="left">
+					<span ng-bind="item.name"></span>
+				</p>
+			</div>
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-4">
+				<p class="left">
+					<span ng-bind="item.selected.count"></span>
+				</p>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+				<p class="right">
+					<span>Rs.</span><span ng-bind="menuItemCtrl.confirmedOrderDetails.totalItemPrice[$index]"></span>
+				</p>
+			</div>
+		</div>
+		<div class="row align-center default-hidden xs-visible" id="confirmation-xs-view">
+			<div class="col-sm-12 col-xs-12">
+				<div class="col-sm-5 col-xs-5">
+					<p class="left">
+						<span>Item Name:</span>
+					</p>
+				</div>
+				<div class="col-sm-7 col-xs-7">
+					<p class="left">
+						<span ng-bind="item.name"></span>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-12 col-xs-12">
+				<div class="col-sm-5 col-xs-5">
+					<p class="left">
+						<span>Quantity:</span>
+					</p>
+				</div>
+				<div class="col-sm-7 col-xs-7">
+					<p class="left">
+					<span ng-bind="item.selected.count"></span>
+				</p>
+				</div>
+			</div>
+			<div class="col-sm-12 col-xs-12">
+				<div class="col-sm-5 col-xs-5">
+					<p class="left">
+						<span>Cost:</span>
+					</p>
+				</div>
+				<div class="col-sm-7 col-xs-7">
+					<p class="left">
+				  <span ng-bind="menuItemCtrl.confirmedOrderDetails.totalItemPrice[$index]"></span>
+				</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div class="bottom-panel row">
+	<p class="total-val-text">
+		<span>Total Value</span>
+	</p>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<p class="total-price">
+			<span>Rs.</span> <span
+				ng-bind="menuItemCtrl.confirmedOrderDetails.totalValue"></span>
+		</p>
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<button>
+			<span>Confirm order</span>
+		</button>
+	</div>
+</div>
+</mainContainer>

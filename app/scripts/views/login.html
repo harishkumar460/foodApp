@@ -1,0 +1,55 @@
+<mainContainer>
+<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<button ui-sref="new_user" class="new-user-registration">
+			<span>New User Registration</span>
+		</button>
+	</div>
+</div>
+<div class="row" id="header_strip">
+	<div class="col-lg-6 col-md-4 col-sm-4 col-xs-12 user-login-text">
+		<p>
+			<span>User Login</span>
+		</p>
+	</div>
+	<div class="col-lg-6 col-md-8 col-sm-8 col-xs-12 validation-rule">
+		<p>
+			<span>Fields marked with an asterisk (*) are mandatory</span>
+		</p>
+	</div>
+</div>
+<div class="row" id="login-form">
+	<form name="loginCtrl.loginForm" ng-submit="loginCtrl.authenticateUser()">
+		<div class="login-form">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p>
+					<span>Username</span><span class="asterisk">*</span>
+				</p>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-b-10">
+				<input type="text" ng-change="loginCtrl.invalidCredentials=false" ng-model="loginCtrl.userName" name="userName" required/>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p>
+					<span>Password</span><span class="asterisk">*</span>
+				</p>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-b-10">
+				<input type="password" ng-change="loginCtrl.invalidCredentials=false" ng-model="loginCtrl.userPassword" name="password" required/>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<span class="error-message" ng-if="loginCtrl.invalidCredentials">
+			Oops! Invalid username or password.Please enter the correct one.		
+			</span>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+			    <button ng-disabled="!loginCtrl.loginForm.$valid">
+					<span>Login</span>
+				</button>
+			</div>
+		</div>
+	</form>
+</div>
+</mainContainer>
+
+

@@ -1,0 +1,88 @@
+{
+  "vendorItems": [
+    {
+      "id": "v001",
+      "items": [
+        {
+          "name": "Stuffed Paratha",
+          "price": "50"
+        },
+        {
+          "name": "Normal Paratha",
+          "price": "30"
+        },
+        {
+          "name": "Plain Paratha",
+          "price": "30"
+        },
+        {
+          "name": "Tawa Paratha",
+          "price": "30"
+        }
+      ]
+    },
+    {
+      "id": "v002",
+      "items": [
+        {
+          "name": "Orange Juice",
+          "price": "30"
+        },
+        {
+          "name": "Pomegranate Juice",
+          "price": "80"
+        },
+        {
+          "name": "Mix Juice",
+          "price": "40"
+        },
+        {
+          "name": "Mango Shake",
+          "price": "30"
+        }
+      ]
+    },
+    {
+      "id": "v003",
+      "items": [
+        {
+          "name": "Stuffed Paratha",
+          "price": "50"
+        },
+        {
+          "name": "Normal Paratha",
+          "price": "30"
+        },
+        {
+          "name": "Plain Paratha",
+          "price": "30"
+        },
+        {
+          "name": "Tawa Paratha",
+          "price": "30"
+        }
+      ]
+    },
+    {
+      "id": "v004",
+      "items": [
+        {
+          "name": "Orange Juice",
+          "price": "30"
+        },
+        {
+          "name": "Pomegranate Juice",
+          "price": "80"
+        },
+        {
+          "name": "Mix Juice",
+          "price": "40"
+        },
+        {
+          "name": "Mango Shake",
+          "price": "30"
+        }
+      ]
+    }
+  ]
+}

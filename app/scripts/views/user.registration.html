@@ -1,0 +1,75 @@
+<mainContainer id="user-registration">
+
+<div class="row" id="header_strip">
+	<div class="col-lg-6 col-md-4 col-sm-4 col-xs-12 user-login-text">
+		<p>
+			<span>User Registration</span>
+		</p>
+	</div>
+	<div class="col-lg-6 col-md-8 col-sm-8 col-xs-12 validation-rule">
+		<p>
+			<span>Fields marked with an asterisk (*) are mandatory</span>
+		</p>
+	</div>
+</div>
+<div class="row" id="user-reg-form">
+	<form name="loginCtrl.userRegistration" ng-submit="loginCtrl.saveUserDetails()">
+		<div class="user-reg-form">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p>
+					<span>First name</span><span class="asterisk">*</span>
+				</p>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-b-10">
+				<input type="text" ng-model="loginCtrl.firstName" name="firstName" required />
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p>
+					<span>Last name</span><span class="asterisk">*</span>
+				</p>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-b-10">
+				<input type="text" ng-model="loginCtrl.lastName" required name="lastName"/>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p>
+					<span>Username</span><span class="asterisk">*</span>
+				</p>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-b-10">
+				<input name="userRegName" type="text" field-validation
+					field-type="userName" ng-model="loginCtrl.userRegName" required />
+				<span class="error-message"
+					ng-if="loginCtrl.userRegistration.userRegName.$dirty && loginCtrl.userRegistration.userRegName.$invalid">
+					User name can have only alphabets, numbers and dots.</span>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p>
+					<span>Password</span><span class="asterisk">*</span>
+				</p>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-b-10">
+				<input type="password" name="userRegPassword" field-type="userPassword" field-validation
+					ng-model="loginCtrl.userRegPassword" required />
+                <span class="error-message"
+					ng-if="loginCtrl.userRegistration.userRegPassword.$dirty && loginCtrl.userRegistration.userRegPassword.$invalid">
+					Password field should have at least an alphabet, a number and  a special character and should have minimum 8 characters</span>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 align-center">
+					<button ui-sref="login" class="user-reg-cancel-btn">
+						<span>Cancel</span>
+					</button>
+				</div>
+				<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 align-center">
+					<button ng-disabled="!loginCtrl.userRegistration.$valid">
+						<span>Submit</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+</mainContainer>
+
+

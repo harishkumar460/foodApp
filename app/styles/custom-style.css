@@ -1,0 +1,530 @@
+/*common css*/
+.m-t-10 {
+	margin-top: 10px;
+}
+
+.m-t-30 {
+	margin-top: 30px;
+}
+
+.m-r-10 {
+	margin-right: 10px;
+}
+
+.m-b-10 {
+	margin-bottom: 10px;
+}
+
+.m-b-30 {
+	margin-bottom: 30px;
+}
+
+.m-l-10 {
+	margin-left: 10px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.default-hidden {
+	display: none;
+}
+/*common css end*/
+.header .navbar {
+	height: 111px;
+	background-color: #76b251;
+	width: 100%;
+	margin-bottom: 0px;
+}
+
+.header {
+	padding: 0;
+}
+
+.logo_icon {
+	height: 109px;
+	margin-left: 100px;
+}
+
+.footer {
+	background-color: #76b252;
+	color: #ffffff;
+	font-size: 15px;
+	font-family: Trebuchet MS;
+	/* position: absolute; */
+	bottom: 0;
+	width: 100%;
+}
+
+.footer p {
+	float: right;
+}
+
+@media screen and (max-width:767px) {
+	.logo_icon {
+		height: 64px;
+		margin-left: 0px;
+	}
+	.header .navbar {
+		height: 66px;
+	}
+	#homepage .content-panel img {
+		height: 160px;
+		width: 280px;
+	}
+	#homepage .content-panel div.block {
+		margin-bottom: 20px;
+	}
+	.xs-hidden {
+		display: none;
+	}
+	.xs-visible {
+		display: block;
+	}
+}
+/*Login page style start*/
+#login-form,.login-form,#user-reg-form,.user-reg-form {
+	padding: 0px; /* 10px 0 0 60px;*/
+}
+
+#login-form p,#user-reg-form p {
+	color: #9c9998;
+	font-size: 15px;
+	font-family: Trebuchet MS;
+}
+
+.user-login-text {
+	height: 46px;
+	background-color: #da5421;
+	font-family: Trebuchet MS;
+	font-size: 14px;
+	color: #ffffff;
+	text-align: left;
+	padding: 15px 20px;
+}
+
+.validation-rule {
+	font-size: 14px;
+	font-family: Trebuchet MS;
+	color: #ff0000;
+	height: 46px;
+	padding-left: 5px;
+}
+
+.login-form button,.user-reg-form button {
+	font-size: 15px;
+	color: #ffffff;
+	background-color: #76b252;
+	width: 202px;
+	height: 45px;
+	float: right;
+	border: 0px;
+	margin-top: 20px;
+}
+
+.asterisk {
+	color: #ff0000;
+	font-size: 22px;
+	margin-left: 5px;
+}
+
+.new-user-registration {
+	height: 24px;
+	width: 161px;
+	background: #c3c3c3;
+	border: #8c8b8b;
+	border-width: 1px;
+	float: right;
+	color: #ffffff;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+#user-registration button {
+	float: none;
+	margin-bottom: 20px;
+	width: 260px;
+}
+
+.align-center {
+	text-align: center;
+}
+
+#login-form input,#user-reg-form input {
+	width: 100%;
+	height: 40px;
+	font-size: 15px;
+}
+/*Home page*/
+#homepage .header-text {
+	height: 60px;
+	background-color: #da5421;
+	font-family: Trebuchet MS;
+	font-size: 18px;
+	color: #ffffff;
+	text-align: left;
+	padding: 16px;
+}
+
+#homepage input.search-box {
+	font-size: 14px;
+	height: 40px;
+	margin: 10px 0px;
+	width: 100%;
+}
+
+#homepage  i {
+	font-size: 20px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+#homepage .content-panel p {
+	font-size: 15px;
+	color: #6c6c6c;
+}
+
+#homepage .content-panel div#confirmation-xs-view p {
+	font-weight: 600;
+}
+
+.bottom-panel .total-price {
+	height: 40px;
+	width: 80%;
+	background-color: #da5421;
+	font-family: Trebuchet MS;
+	font-size: 17px;
+	color: #ffffff;
+	padding: 8px 5px 0 0;
+	float: right;
+	text-align: right;
+}
+
+.bottom-panel button {
+	font-size: 18px;
+	color: #ffffff;
+	background-color: #76b252;
+	width: 170px;
+	height: 40px;
+	float: right;
+	border: 0px;
+	margin: 10px 0px;
+}
+
+.bottom-panel p.total-val-text {
+	color: #da5421;
+	font-family: Trebuchet MS;
+	font-size: 17px;
+	background-color: #ffffff;
+	width: 80%;
+	float: right;
+}
+
+.item-qty-menu {
+	width: 100px;
+}
+
+div#confirmation-xs-view {
+	border: solid 2px;
+	border-color: rgba(109, 109, 109, 0.3);
+	margin: 15px -5px;
+}
+/*End Homepage*/
+@media screen and (min-width:768px) {
+	div.row {
+		width: 630px;
+		margin-left: 40px;
+	}
+	#login-form,.login-form,#user-reg-form,.user-reg-form {
+		padding: 10px 0 0 0px;
+	}
+	.validation-rule {
+		font-size: 15px;
+		font-family: Trebuchet MS;
+		color: #ffffff;
+		background-color: #da5421;
+		height: 80px;
+	}
+	.validation-rule p {
+		padding-top: 60px;
+	}
+	.user-login-text {
+		height: 80px;
+		font-size: 18px;
+	}
+	#login-form p,#user-reg-form p {
+		color: #9c9998;
+		font-size: 18px;
+		font-family: Trebuchet MS;
+	}
+	#login-form input,#user-reg-form input {
+		width: 560px;
+		height: 50px;
+		font-size: 18px;
+	}
+	.new-user-registration {
+		height: 38px;
+		width: 260px;
+		background: #c3c3c3;
+		border: #8c8b8b;
+		border-width: 1px;
+		float: right;
+		color: #ffffff;
+		font-size: 18px;
+	}
+	.login-form button,.user-reg-form button {
+		font-size: 18px;
+		color: #ffffff;
+		background-color: #76b252;
+		width: 270px;
+		height: 58px;
+		float: right;
+		border: 0px;
+		margin-right: 40px;
+		margin-top: 20px;
+	}
+	.user-reg-cancel-btn {
+		float: none;
+	}
+	/*Home page*/
+	#homepage .header-text {
+		height: 60px;
+		background-color: #da5421;
+		font-family: Trebuchet MS;
+		font-size: 20px;
+		color: #ffffff;
+		text-align: left;
+		padding: 16px;
+	}
+	#homepage input.search-box {
+		font-size: 16px;
+		height: 50px;
+		margin: 20px 0px;
+		width: 100%;
+	}
+	#homepage  i {
+		font-size: 25px;
+		position: absolute;
+		right: 25px;
+		top: 35px;
+	}
+	#homepage .content-panel img {
+		height: 160px;
+		width: 280px;
+	}
+	#homepage .content-panel p {
+		font-size: 17px;
+		color: #6c6c6c;
+	}
+	.bottom-panel .total-price {
+		height: 40px;
+		width: 40%;
+		background-color: #da5421;
+		font-family: Trebuchet MS;
+		font-size: 17px;
+		color: #ffffff;
+		padding: 8px 5px 0 0;
+		float: right;
+		text-align: right;
+	}
+	.bottom-panel button {
+		font-size: 18px;
+		color: #ffffff;
+		background-color: #76b252;
+		width: 170px;
+		height: 40px;
+		float: right;
+		border: 0px;
+		margin: 10px 0px;
+	}
+	.bottom-panel p.total-val-text {
+		color: #da5421;
+		font-family: Trebuchet MS;
+		font-size: 17px;
+		background-color: #ffffff;
+		width: 40%;
+		float: right;
+	}
+	.item-qty-menu {
+		width: 200px;
+	}
+	/*End Homepage*/
+}
+
+@media screen and (min-width:1200px) {
+	div.row {
+		width: 1004px;
+		margin-left: 40px;
+	}
+	#login-form,.login-form,#user-reg-form,.user-reg-form {
+		padding: 10px 0 0 60px;
+	}
+	.validation-rule {
+		font-size: 18px;
+		font-family: Trebuchet MS;
+		color: #ffffff;
+		background-color: #da5421;
+		padding-top: 20px;
+		height: 93px;
+	}
+	.validation-rule p {
+		padding-top: 40px
+	}
+	.user-login-text {
+		height: 93px;
+		background-color: #da5421;
+		font-family: Trebuchet MS;
+		font-size: 22px;
+		color: #ffffff;
+		text-align: left;
+		padding: 30px 20px;
+	}
+	#login-form input,#user-reg-form input {
+		width: 668px;
+		height: 50px;
+		font-size: 18px;
+	}
+	.new-user-registration {
+		height: 38px;
+		width: 260px;
+		background: #c3c3c3;
+		border: #8c8b8b;
+		border-width: 1px;
+		float: right;
+		color: #ffffff;
+		font-size: 18px;
+	}
+	#login-form p,#user-reg-form p {
+		color: #9c9998;
+		font-size: 18px;
+		font-family: Trebuchet MS;
+	}
+	.login-form button,.user-reg-form button {
+		font-size: 18px;
+		color: #ffffff;
+		background-color: #76b252;
+		width: 270px;
+		height: 58px;
+		float: right;
+		border: 0px;
+		margin-right: 40px;
+		margin-top: 20px;
+	}
+	/*Home page*/
+	#homepage .header-text {
+		height: 70px;
+		background-color: #da5421;
+		font-family: Trebuchet MS;
+		font-size: 22px;
+		color: #ffffff;
+		text-align: left;
+		padding: 20px;
+	}
+	#homepage input.search-box {
+		font-size: 16px;
+		height: 50px;
+		margin: 20px 0px;
+		width: 100%;
+	}
+	#homepage  i {
+		font-size: 25px;
+		position: absolute;
+		right: 25px;
+		top: 35px;
+	}
+	#homepage .content-panel img {
+		height: auto;
+		width: auto;
+	}
+	.bottom-panel .total-price {
+		height: 40px;
+		width: 25%;
+		background-color: #da5421;
+		font-family: Trebuchet MS;
+		font-size: 17px;
+		color: #ffffff;
+		padding: 8px 5px 0 0;
+		float: right;
+		text-align: right;
+	}
+	.bottom-panel button {
+		font-size: 18px;
+		color: #ffffff;
+		background-color: #76b252;
+		width: 170px;
+		height: 40px;
+		float: right;
+		border: 0px;
+		margin: 10px 0px;
+	}
+	.bottom-panel p.total-val-text {
+		color: #da5421;
+		font-family: Trebuchet MS;
+		font-size: 17px;
+		background-color: #ffffff;
+		width: 25%;
+		float: right;
+	}
+	.item-qty-menu {
+		width: 200px;
+	}
+	#homepage .content-panel p {
+		font-size: 17px;
+		color: #6c6c6c;
+	}
+	/*End Homepage*/
+}
+
+button[disabled] {
+	cursor: not-allowed;
+	opacity: .7;
+}
+
+.error-message {
+	color: #FF0000;
+	font-size: 15px;
+	display: inline-block;
+}
+
+#user-registration input.ng-invalid.ng-dirty {
+	border: solid 1px #ff0000;
+}
+
+.vendor-block {
+	-webkit-transition: linear .5s;
+	-moz-transition: linear .5s;
+	-ms-transition: linear .5s;
+	transition: linear .5s;
+}
+
+.vendor-block:hover {
+	cursor: pointer;
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	transform: rotate(2deg);
+}
+/*********** Stick footer**************/
+* {
+	margin: 0;
+}
+
+html,body {
+	height: 100%;
+}
+
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -19px;
+}
+
+/*********End stick footer*************/
+/*Login page style end*/

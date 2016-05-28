@@ -1,0 +1,28 @@
+<mainContainer id="homepage">
+<div class="row" id="header_strip">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-text">
+		<p>
+			<span>Please select Restaurant</span>
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<input class="search-box" ng-model="homeCtrl.searchLocation" type="text" placeholder="Search Location" />
+		<i class="glyphicon glyphicon-search"></i>
+	</div>
+</div>
+<div class="content-panel m-b-30">
+	<div ng-class="$last?'m-t-30':''"
+		ng-repeat="vendorRow in homeCtrl.vendorsList" class="row align-center">
+		<div ng-repeat="vendor in vendorRow.vendor|filter:homeCtrl.searchLocation"
+			class="col-lg-6 col-md-6 col-sm-6 col-xs-12 xs-hidden" >
+			<img ng-click="homeCtrl.selectVendor(vendor)" class="vendor-block" src="{{vendor.image}}" />
+		</div>
+		<div ng-repeat="vendor in vendorRow.vendor|filter:homeCtrl.searchLocation"
+			class="col-lg-6 col-md-6 col-sm-6 col-xs-12 default-hidden xs-visible" ng-class="$last?'m-t-30':''">
+			<img ng-click="homeCtrl.selectVendor(vendor)" class="vendor-block" src="{{vendor.image}}" />
+		</div>
+	</div>
+</div>
+</mainContainer>

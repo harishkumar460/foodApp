@@ -1,0 +1,32 @@
+{
+  "list": [
+    {
+      "vendor": [
+        {
+          "id":"v001",
+          "name": "Paratha Corner",
+          "image": "./images/pics-1.jpg"
+        },
+        {
+          "id":"v002",
+          "name": "Pavitra Juice Center",
+          "image": "./images/pics2.jpg"
+        }
+      ]
+    },
+    {
+      "vendor": [
+        {
+          "id":"v003",
+          "name": "Paratha Corner",
+          "image": "./images/pics-1.jpg"
+        },
+        {
+          "id":"v004",
+          "name": "Pavitra Juice Center",
+          "image": "./images/pics2.jpg"
+        }
+      ]
+    }
+  ]
+}
