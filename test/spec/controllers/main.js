@@ -1,23 +1,30 @@
 'use strict';
-
-describe('Controller: MainCtrl', function () {
+var expect=mocha.expect;
+describe('Controller: loginController', function () {
 
   // load the controller's module
   beforeEach(module('foodApp'));
 
-  var MainCtrl,
-    scope;
+  var self,scope,mockLoginService,mockdbService;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
-      $scope: scope
+    self = $controller('loginController', {
+      $scope: scope,
+      loginService:mockLoginService,
+      dbService:mockdbService
       // place here mocked dependencies
     });
   }));
-
+  mockLoginService={
+	  saveUserDetails:function(){},
+	  authenticateUser:function(){}
+  };
+  mockdbService={
+	  createUserSession:function(){}  
+  };
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(MainCtrl.awesomeThings.length).toBe(3);
+    expect(typeof self).toBe('object');
   });
 });
