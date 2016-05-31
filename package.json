@@ -30,9 +30,11 @@
     "jshint-stylish": "^1.0.0",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.0.0",
     "karma-firefox-launcher": "^1.0.0",
     "time-grunt": "^1.0.0",
-    "ui-select": "^0.17.1"
+    "ui-select": "^0.17.1",
+    "verbose": "^0.2.3"
   },
   "engines": {
     "node": ">=0.10.0"

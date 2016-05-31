@@ -17,9 +17,9 @@ foodApp.service('loginService', function(dbService) {
     self.authenticateUser=function(userInput){
 	var userInfo=dbService.fetchUser(userInput.userName.$modelValue);
 	if(userInfo){
-	  return !(userInput.userName.$modelValue===userInfo.userName&&userInput.password.$modelValue===userInfo.password);   
+	  return (userInput.userName.$modelValue===userInfo.userName&&userInput.password.$modelValue===userInfo.password);   
 	}else{
-	  return true;  
+	  return false;  
 	}
     };
 });
