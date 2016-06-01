@@ -4,6 +4,7 @@
   "devDependencies": {
     "angular-ui-router": "^0.2.18",
     "autoprefixer-core": "^5.2.1",
+    "chai": "^3.5.0",
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
     "grunt-concurrent": "^1.0.0",
@@ -20,6 +21,7 @@
     "grunt-filerev": "^2.1.2",
     "grunt-google-cdn": "^0.4.3",
     "grunt-jscs": "^1.8.0",
+    "grunt-karma": "^2.0.0",
     "grunt-newer": "^1.1.0",
     "grunt-ng-annotate": "^0.9.2",
     "grunt-postcss": "^0.5.5",
@@ -29,14 +31,23 @@
     "jit-grunt": "^0.9.1",
     "jshint-stylish": "^1.0.0",
     "karma": "^0.13.22",
+    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^1.0.1",
     "karma-coverage": "^1.0.0",
     "karma-firefox-launcher": "^1.0.0",
+    "karma-requirejs": "^1.0.0",
+    "karma-sinon": "^1.0.5",
+    "requirejs": "^2.2.0",
+    "sinon": "^1.17.4",
     "time-grunt": "^1.0.0",
     "ui-select": "^0.17.1",
     "verbose": "^0.2.3"
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "scripts": {
+    "bower": "bower",
+    "grunt": "grunt"
   }
 }

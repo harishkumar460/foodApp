@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for test\spec\controllers\login.controller.test.js</title>
+    <title>Code coverage report for test\spec\controllers\menu.item.controller.test.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">all files</a> / <a href="index.html">test/spec/controllers/</a> login.controller.test.js
+      <a href="../../../index.html">all files</a> / <a href="index.html">test/spec/controllers/</a> menu.item.controller.test.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>25/25</span>
+        <span class='fraction'>28/28</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>8/8</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>25/25</span>
+        <span class='fraction'>28/28</span>
       </div>
     </div>
   </div>
@@ -80,49 +80,21 @@
 35
 36
 37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+38</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
@@ -132,62 +104,57 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
 var expect=chai.expect;
 var assert=chai.assert;
-describe('Controller: loginController', function () {
-&nbsp;
-  // load the controller's module
-  beforeEach(module('foodApp'));
-&nbsp;
-  var self,scope,mockLoginService,mockdbService;
-&nbsp;
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    self = $controller('loginController', {
-      $scope: scope,
-      loginService:mockLoginService,
-      dbService:mockdbService
-      // place here mocked dependencies
-    });
-  }));
-  var userInfo='';
-  mockLoginService={
-	  saveUserDetails:function(){
-	    userInfo={userName:self.userRegistration.userName,password:self.userRegistration.password};  
-	  },
-	  authenticateUser:function(){
-	   return (self.loginForm.userName.$modelValue===userInfo.userName&amp;&amp;self.loginForm.password.$modelValue===userInfo.password);   
-	  }
-  };
-  mockdbService={
-	  createUserSession:function(){}  
-  };
-  it('should test saveUserDetails', function () {
-      self.userRegistration={userName:'test',password:'test@123'};
-      self.saveUserDetails();
-      expect(userInfo.userName).to.equal(self.userRegistration.userName);
-  });
-  it('should test authenticateUser valid case', function () {
-      self.loginForm={userName:{$modelValue:'test'},password:{$modelValue:'test@123'}};
-      self.authenticateUser();
-      expect(self.validCredentials).to.equal(true);
-  });
-  it('should test authenticateUser invalid case', function () {
-      self.loginForm={userName:{$modelValue:'tesdf'},password:{$modelValue:'test@123'}};
-      self.authenticateUser();
-      expect(self.validCredentials).to.equal(false);
-  });
-});
-&nbsp;</pre></td></tr>
+describe('Menu item controller test case run',function(){
+	var self,scope,$state;
+	beforeEach(module('foodApp'));
+	beforeEach(inject(function($controller,$rootScope,_$state_){
+	scope=$rootScope.$new();
+	$state=_$state_;
+    self=$controller('menuItemController',{
+	$scope:scope,
+    $state:$state
+	});	
+	}));
+	it('should  test checkoutOrder function as expected',function(){
+	 var statecaller = sinon.stub($state, 'go');
+     statecaller.withArgs('menu_item_confirm');
+	 self.checkoutOrder();
+     expect(statecaller.called).to.equal(true);	 
+	});
+	it('should  test calculatePrice function as expected true',function(){
+	 var item={id:'v001',name:'Mango Juice',price:30,selected:{count:2}};
+	 var index=0;
+	 self.calculatePrice(item,index);
+     expect(self.totalItemPrice[index]).to.equal(60);	 
+	});
+	it('should  test calculatePrice function as expected false case',function(){
+	 var item={id:'v001',name:'Mango Juice',price:30,selected:{id:'qty',count:''}};
+	 var index=0;
+	 self.calculatePrice(item,index);
+     expect(self.totalItemPrice[index]).to.equal('0.00');	 
+	});
+	it('should  test calculateTotalValue function as expected',function(){
+	 self.totalItemPrice=[30,20,50,''];
+	 self.calculateTotalValue();
+     expect(self.totalValue).to.equal(100);	 
+	});
+});</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->

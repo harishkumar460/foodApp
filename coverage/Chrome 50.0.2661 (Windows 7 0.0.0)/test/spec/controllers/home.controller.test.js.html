@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for app\scripts\controllers\login.controller.js</title>
+    <title>Code coverage report for test\spec\controllers\home.controller.test.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">all files</a> / <a href="index.html">app/scripts/controllers/</a> login.controller.js
+      <a href="../../../index.html">all files</a> / <a href="index.html">test/spec/controllers/</a> home.controller.test.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>11/11</span>
+        <span class='fraction'>20/20</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>3/3</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>11/11</span>
+        <span class='fraction'>20/20</span>
       </div>
     </div>
   </div>
@@ -65,50 +65,83 @@
 20
 21
 22
-23</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
-&nbsp;
-/**
- * @ngdoc function
- * @name foodApp.controller:MainCtrl
- * @description # MainCtrl Controller of the foodApp
- */
-foodApp.controller('loginController', function(loginService, $state,dbService) {
-    var self = this;
-    self.validCredentials=true;
-    self.saveUserDetails = function() {
-	loginService.saveUserDetails(self.userRegistration);
-	$state.go('login');
-    };
-    
-    self.authenticateUser=function(){
-	self.validCredentials=loginService.authenticateUser(self.loginForm);
-	if(self.validCredentials){
-	    dbService.createUserSession(self.loginForm.userName.$modelValue,self.loginForm.password.$modelValue);
-	    $state.go('home');
-	}
-    };
+var expect=chai.expect;
+var assert=chai.assert;
+describe('Test case run for home controller',function(){
+    beforeEach(module('foodApp'));	
+	var self,scope,q,homeService,$state;
+	
+	beforeEach(inject(function($controller,$rootScope,$q,_$state_){
+		scope=$rootScope.$new();
+		q=$q;
+		$state=_$state_;
+		self=$controller('homeController',{
+		$scope:scope,
+        homeService:mockhomeService		
+		});
+	}));
+	it('Should test selectVendor',function(){
+		var statecaller = sinon.stub($state, 'go');
+         statecaller.withArgs('menu_item');
+		self.selectVendor();
+	  expect(statecaller.called).to.equal(true);		
+	});
+	var mockhomeService={
+		getVendors:function(){
+			var deferred=q.defer();
+		  var data={data:{list:[{vendor:'vendormock'},{vendor:'vendormock2'}]}};
+		  deferred.resolve(data);
+		  return deferred.promise;
+		},
+		setSelectedVendor:function(setSelectedVendor){
+			
+		}
+	};
 });</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
