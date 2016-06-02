@@ -13,6 +13,10 @@ describe('Login service test case run',function(){
 					 userRegName:{$modelValue:'test_1'},
 					 userRegPassword:{$modelValue:'test@123'}};
 		loginService.saveUserDetails(formObj);
+		var loginUserInput={userName:{$modelValue:'test_1'},
+					 password:{$modelValue:'test@123'}};
+		var authenticated=loginService.authenticateUser(loginUserInput);
+		expect(authenticated).to.equal(true);
 	});
 	it('should test authenticateUser function as expected true case',function(){
 		var formObj={userName:{$modelValue:'test_1'},
