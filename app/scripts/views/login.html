@@ -38,9 +38,7 @@
 				<input type="password" ng-change="loginCtrl.validCredentials=true" ng-model="loginCtrl.userPassword" name="password" required/>
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<span class="error-message" ng-if="!loginCtrl.validCredentials">
-			Oops! Invalid username or password.Please enter the correct one.		
-			</span>
+			<span ng-bind="loginCtrl.errorMessage" class="error-message" ng-if="!loginCtrl.validCredentials"></span>
 			</div>
 			<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
 			    <button ng-disabled="!loginCtrl.loginForm.$valid">

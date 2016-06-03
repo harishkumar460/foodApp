@@ -18,6 +18,8 @@ foodApp.controller('loginController', function(loginService, $state,dbService) {
 	if(self.validCredentials){
 	    dbService.createUserSession(self.loginForm.userName.$modelValue,self.loginForm.password.$modelValue);
 	    $state.go('home');
+	}else{
+	  self.errorMessage='Oops! Invalid username or password.Please enter the correct one.';  
 	}
     };
 });
