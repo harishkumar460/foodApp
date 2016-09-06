@@ -22,4 +22,5 @@ foodApp.controller('loginController', function(loginService, $state,dbService) {
 	  self.errorMessage='Oops! Invalid username or password.Please enter the correct one.';  
 	}
     };
+    dbService.openIndexDB();
 });
