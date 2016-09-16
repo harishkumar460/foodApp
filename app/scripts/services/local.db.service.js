@@ -37,19 +37,25 @@ foodApp.service('dbService', function() {
     self.openIndexDB=function(){
     self.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
      var customerData = [
-						  { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
-						  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" }
+						  { date: "444-44-4444", month: 8, year: 2016, name: "travel" },
+						  { date: "555-55-5555", month: 9, year: 2016, name: "food1" },
+						  { date: "555-55-5555", month: 9, year: 2016, name: "food2" },
+						  { date: "555-55-5555", month: 9, year: 2016, name: "food3" },
+						  { date: "555-55-5555", month: 9, year: 2016, name: "food4" },
+						  { date: "555-55-5555", month: 9, year: 2016, name: "food5" },
+						  { date: "555-55-5555", month: 8, year: 2016, name: "food6" },
+						  { date: "555-55-5555", month: 8, year: 2016, name: "food7" },
 						];
   
     var request = window.indexedDB.open('myDB', 2);
 	request.onupgradeneeded = function(event) {
      var db = event.target.result;
 
-     var objectStore = db.createObjectStore("customers", { keyPath: "ssn" });
+     var objectStore = db.createObjectStore("customers", { keyPath: "date" });
 
-		  objectStore.createIndex("name", "name", { unique: false });
+		  objectStore.createIndex("month", "month", { unique: false });
 		  
-		  objectStore.createIndex("email", "email", { unique: true });
+		  objectStore.createIndex("year", "year", { unique: false });
 
 		  objectStore.transaction.oncomplete = function(event) {
 		   
@@ -57,6 +63,9 @@ foodApp.service('dbService', function() {
 		    for (var i in customerData) {
 		      customerObjectStore.add(customerData[i]);
 		    }
+
+		    //https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB
+		    //https://github.com/twinssbc/Ionic-Calendar
 		  };
 
 
